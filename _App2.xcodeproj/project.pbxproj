@@ -7,15 +7,71 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC38B5E21B73D9EF00158195 /* Words.txt in Sources */ = {isa = PBXBuildFile; fileRef = ECADE2EB1B73D5160069B411 /* Words.txt */; };
+		EC38B5E51B73DAC000158195 /* Words.txt in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ECADE2EB1B73D5160069B411 /* Words.txt */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		EC38B5E71B73DC8400158195 /* Words.txt in Frameworks */ = {isa = PBXBuildFile; fileRef = EC38B5E61B73DC6700158195 /* Words.txt */; };
 		ECAD24771B6171190008844D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAD24761B6171190008844D /* AppDelegate.swift */; };
-		ECAD24791B6171190008844D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAD24781B6171190008844D /* ViewController.swift */; };
-		ECAD247C1B6171190008844D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECAD247A1B6171190008844D /* Main.storyboard */; };
-		ECAD247E1B6171190008844D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECAD247D1B6171190008844D /* Images.xcassets */; };
 		ECAD24811B6171190008844D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECAD247F1B6171190008844D /* LaunchScreen.xib */; };
-		ECAD248D1B6171190008844D /* _App2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAD248C1B6171190008844D /* _App2Tests.swift */; };
+		ECAD24991B6171540008844D /* DecryptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAD24971B6171540008844D /* DecryptViewController.swift */; };
+		ECAD249A1B6171540008844D /* EncryptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAD24981B6171540008844D /* EncryptViewController.swift */; };
+		ECAD249E1B61716B0008844D /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAD249D1B61716B0008844D /* PhotoViewController.swift */; };
+		ECAD24A21B6171870008844D /* Fingerprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAD24A01B6171870008844D /* Fingerprint.swift */; };
+		ECAD24A31B6171870008844D /* FingerprintCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAD24A11B6171870008844D /* FingerprintCalculator.swift */; };
+		ECAD24A51B6171D90008844D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECAD24A41B6171D90008844D /* Main.storyboard */; };
+		ECAD24BF1B61724B0008844D /* RandomWordGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAD24B21B61724B0008844D /* RandomWordGen.swift */; };
+		ECAD24C51B6172A30008844D /* PhotoTakingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAD24C41B6172A30008844D /* PhotoTakingHelper.swift */; };
+		ECAD24C71B617B230008844D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAD24C61B617B230008844D /* AudioToolbox.framework */; };
+		ECAD24C91B617B290008844D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAD24C81B617B290008844D /* CFNetwork.framework */; };
+		ECAD24CB1B617B380008844D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAD24CA1B617B380008844D /* CoreGraphics.framework */; };
+		ECAD24CD1B617B410008844D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAD24CC1B617B410008844D /* CoreLocation.framework */; };
+		ECAD24CF1B617B560008844D /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAD24CE1B617B560008844D /* libz.1.1.3.dylib */; };
+		ECAD24D11B617B5C0008844D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAD24D01B617B5C0008844D /* MobileCoreServices.framework */; };
+		ECAD24D31B617B6A0008844D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAD24D21B617B6A0008844D /* QuartzCore.framework */; };
+		ECAD24D51B617B6F0008844D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAD24D41B617B6F0008844D /* Security.framework */; };
+		ECAD24D71B617B7B0008844D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAD24D61B617B7B0008844D /* StoreKit.framework */; };
+		ECAD24D91B617B870008844D /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAD24D81B617B870008844D /* libsqlite3.0.dylib */; };
+		ECAD24E11B617BC40008844D /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAD24DB1B617BC40008844D /* Bolts.framework */; };
+		ECAD24E21B617BC40008844D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAD24DC1B617BC40008844D /* Parse.framework */; };
+		ECAD24E31B617BC40008844D /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAD24DD1B617BC40008844D /* ParseCrashReporting.framework */; };
+		ECAD24E41B617BC40008844D /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAD24DE1B617BC40008844D /* ParseFacebookUtils.framework */; };
+		ECAD24E51B617BC40008844D /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAD24DF1B617BC40008844D /* ParseFacebookUtilsV4.framework */; };
+		ECAD24E61B617BC40008844D /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAD24E01B617BC40008844D /* ParseUI.framework */; };
+		ECAD24E91B617BEF0008844D /* CustomClass.m in Sources */ = {isa = PBXBuildFile; fileRef = ECAD24E81B617BEF0008844D /* CustomClass.m */; };
+		ECAD24EB1B617D600008844D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAD24EA1B617D600008844D /* CoreData.framework */; };
+		ECAD24EC1B617DA30008844D /* _App2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAD248C1B6171190008844D /* _App2Tests.swift */; };
+		ECAD24EE1B617E8E0008844D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAD24ED1B617E8E0008844D /* SystemConfiguration.framework */; };
+		ECAD24F11B6181160008844D /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAD24F01B6181160008844D /* libsqlite3.dylib */; };
+		ECAD24F21B6187260008844D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAD24ED1B617E8E0008844D /* SystemConfiguration.framework */; };
+		ECADE2EC1B73D5160069B411 /* Words.txt in Resources */ = {isa = PBXBuildFile; fileRef = ECADE2EB1B73D5160069B411 /* Words.txt */; };
+		ECF159841B7287FB000F5547 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECF159831B7287FB000F5547 /* Images.xcassets */; };
+		ECF4F6951B7148390026F3D6 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7A58D61B62D1A400D7E374 /* CryptoSwift.framework */; };
+		ECF4F6961B7148DC0026F3D6 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7A58D61B62D1A400D7E374 /* CryptoSwift.framework */; };
+		ECF4F6971B7149AF0026F3D6 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7A58D61B62D1A400D7E374 /* CryptoSwift.framework */; };
+		ECF4F6981B7149AF0026F3D6 /* CryptoSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EC7A58D61B62D1A400D7E374 /* CryptoSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		EC7A58D51B62D1A400D7E374 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC7A58CF1B62D1A400D7E374 /* CryptoSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 754BE45519693E190098E6F3;
+			remoteInfo = CryptoSwift;
+		};
+		EC7A58D71B62D1A400D7E374 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC7A58CF1B62D1A400D7E374 /* CryptoSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 754BE46019693E190098E6F3;
+			remoteInfo = CryptoSwiftTests;
+		};
+		EC7A58D91B62D1E800D7E374 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC7A58CF1B62D1A400D7E374 /* CryptoSwift.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 754BE45419693E190098E6F3;
+			remoteInfo = CryptoSwift;
+		};
 		ECAD24871B6171190008844D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = ECAD24691B6171190008844D /* Project object */;
@@ -23,19 +79,71 @@
 			remoteGlobalIDString = ECAD24701B6171190008844D;
 			remoteInfo = _App2;
 		};
+		ECF4F6991B7149AF0026F3D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC7A58CF1B62D1A400D7E374 /* CryptoSwift.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 754BE45419693E190098E6F3;
+			remoteInfo = CryptoSwift;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		ECF4F69B1B7149AF0026F3D6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EC38B5E51B73DAC000158195 /* Words.txt in Embed Frameworks */,
+				ECF4F6981B7149AF0026F3D6 /* CryptoSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		EC38B5E61B73DC6700158195 /* Words.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = Words.txt; path = _App2/Words.txt; sourceTree = "<group>"; };
+		EC7A58CF1B62D1A400D7E374 /* CryptoSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CryptoSwift.xcodeproj; path = CryptoSwift/CryptoSwift.xcodeproj; sourceTree = SOURCE_ROOT; };
 		ECAD24711B6171190008844D /* _App2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = _App2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECAD24751B6171190008844D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECAD24761B6171190008844D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ECAD24781B6171190008844D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		ECAD247B1B6171190008844D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		ECAD247D1B6171190008844D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		ECAD24801B6171190008844D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		ECAD24861B6171190008844D /* _App2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = _App2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECAD248B1B6171190008844D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECAD248C1B6171190008844D /* _App2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _App2Tests.swift; sourceTree = "<group>"; };
+		ECAD24971B6171540008844D /* DecryptViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecryptViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		ECAD24981B6171540008844D /* EncryptViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncryptViewController.swift; sourceTree = "<group>"; };
+		ECAD249D1B61716B0008844D /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		ECAD24A01B6171870008844D /* Fingerprint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fingerprint.swift; sourceTree = "<group>"; };
+		ECAD24A11B6171870008844D /* FingerprintCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FingerprintCalculator.swift; sourceTree = "<group>"; };
+		ECAD24A41B6171D90008844D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		ECAD24B21B61724B0008844D /* RandomWordGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomWordGen.swift; sourceTree = "<group>"; };
+		ECAD24C41B6172A30008844D /* PhotoTakingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoTakingHelper.swift; path = ../../_App/_App/PhotoTakingHelper.swift; sourceTree = "<group>"; };
+		ECAD24C61B617B230008844D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		ECAD24C81B617B290008844D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		ECAD24CA1B617B380008844D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		ECAD24CC1B617B410008844D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		ECAD24CE1B617B560008844D /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		ECAD24D01B617B5C0008844D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		ECAD24D21B617B6A0008844D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		ECAD24D41B617B6F0008844D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		ECAD24D61B617B7B0008844D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		ECAD24D81B617B870008844D /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		ECAD24DB1B617BC40008844D /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		ECAD24DC1B617BC40008844D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		ECAD24DD1B617BC40008844D /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
+		ECAD24DE1B617BC40008844D /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		ECAD24DF1B617BC40008844D /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
+		ECAD24E01B617BC40008844D /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		ECAD24E71B617BEE0008844D /* _App2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "_App2-Bridging-Header.h"; sourceTree = "<group>"; };
+		ECAD24E81B617BEF0008844D /* CustomClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomClass.m; sourceTree = "<group>"; };
+		ECAD24EA1B617D600008844D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		ECAD24ED1B617E8E0008844D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		ECAD24F01B6181160008844D /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		ECADE2EB1B73D5160069B411 /* Words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Words.txt; sourceTree = "<group>"; };
+		ECF159831B7287FB000F5547 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = _App2/Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +151,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC38B5E71B73DC8400158195 /* Words.txt in Frameworks */,
+				ECF4F6951B7148390026F3D6 /* CryptoSwift.framework in Frameworks */,
+				ECAD24F21B6187260008844D /* SystemConfiguration.framework in Frameworks */,
+				ECAD24E41B617BC40008844D /* ParseFacebookUtils.framework in Frameworks */,
+				ECAD24D91B617B870008844D /* libsqlite3.0.dylib in Frameworks */,
+				ECAD24D71B617B7B0008844D /* StoreKit.framework in Frameworks */,
+				ECAD24D51B617B6F0008844D /* Security.framework in Frameworks */,
+				ECAD24D31B617B6A0008844D /* QuartzCore.framework in Frameworks */,
+				ECAD24D11B617B5C0008844D /* MobileCoreServices.framework in Frameworks */,
+				ECAD24E61B617BC40008844D /* ParseUI.framework in Frameworks */,
+				ECAD24CF1B617B560008844D /* libz.1.1.3.dylib in Frameworks */,
+				ECAD24CD1B617B410008844D /* CoreLocation.framework in Frameworks */,
+				ECAD24CB1B617B380008844D /* CoreGraphics.framework in Frameworks */,
+				ECF4F6971B7149AF0026F3D6 /* CryptoSwift.framework in Frameworks */,
+				ECAD24E11B617BC40008844D /* Bolts.framework in Frameworks */,
+				ECAD24C91B617B290008844D /* CFNetwork.framework in Frameworks */,
+				ECAD24E21B617BC40008844D /* Parse.framework in Frameworks */,
+				ECAD24C71B617B230008844D /* AudioToolbox.framework in Frameworks */,
+				ECAD24E31B617BC40008844D /* ParseCrashReporting.framework in Frameworks */,
+				ECAD24E51B617BC40008844D /* ParseFacebookUtilsV4.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +178,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECF4F6961B7148DC0026F3D6 /* CryptoSwift.framework in Frameworks */,
+				ECAD24F11B6181160008844D /* libsqlite3.dylib in Frameworks */,
+				ECAD24EE1B617E8E0008844D /* SystemConfiguration.framework in Frameworks */,
+				ECAD24EB1B617D600008844D /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC7A58D01B62D1A400D7E374 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC7A58D61B62D1A400D7E374 /* CryptoSwift.framework */,
+				EC7A58D81B62D1A400D7E374 /* CryptoSwiftTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		ECAD24681B6171190008844D = {
 			isa = PBXGroup;
 			children = (
+				EC38B5E61B73DC6700158195 /* Words.txt */,
+				ECF159831B7287FB000F5547 /* Images.xcassets */,
+				ECAD24EF1B617EAB0008844D /* Frameworks */,
 				ECAD24731B6171190008844D /* _App2 */,
 				ECAD24891B6171190008844D /* _App2Tests */,
 				ECAD24721B6171190008844D /* Products */,
+				ECAD24E71B617BEE0008844D /* _App2-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,10 +222,12 @@
 		ECAD24731B6171190008844D /* _App2 */ = {
 			isa = PBXGroup;
 			children = (
+				EC7A58CF1B62D1A400D7E374 /* CryptoSwift.xcodeproj */,
+				ECAD24C31B61728F0008844D /* PhotoTaking */,
+				ECAD249F1B6171710008844D /* ImageComparison */,
+				ECAD24961B61713F0008844D /* ViewControllers */,
 				ECAD24761B6171190008844D /* AppDelegate.swift */,
-				ECAD24781B6171190008844D /* ViewController.swift */,
-				ECAD247A1B6171190008844D /* Main.storyboard */,
-				ECAD247D1B6171190008844D /* Images.xcassets */,
+				ECAD24A41B6171D90008844D /* Main.storyboard */,
 				ECAD247F1B6171190008844D /* LaunchScreen.xib */,
 				ECAD24741B6171190008844D /* Supporting Files */,
 			);
@@ -112,6 +259,72 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		ECAD24961B61713F0008844D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				ECAD249D1B61716B0008844D /* PhotoViewController.swift */,
+				ECAD24971B6171540008844D /* DecryptViewController.swift */,
+				ECAD24981B6171540008844D /* EncryptViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		ECAD249F1B6171710008844D /* ImageComparison */ = {
+			isa = PBXGroup;
+			children = (
+				ECAD24A01B6171870008844D /* Fingerprint.swift */,
+				ECAD24B21B61724B0008844D /* RandomWordGen.swift */,
+				ECADE2EB1B73D5160069B411 /* Words.txt */,
+				ECAD24A11B6171870008844D /* FingerprintCalculator.swift */,
+			);
+			name = ImageComparison;
+			sourceTree = "<group>";
+		};
+		ECAD24C31B61728F0008844D /* PhotoTaking */ = {
+			isa = PBXGroup;
+			children = (
+				ECAD24C41B6172A30008844D /* PhotoTakingHelper.swift */,
+			);
+			name = PhotoTaking;
+			path = ../_App2.xcodeproj;
+			sourceTree = "<group>";
+		};
+		ECAD24DA1B617BC40008844D /* parse-library-1-2 */ = {
+			isa = PBXGroup;
+			children = (
+				ECAD24DB1B617BC40008844D /* Bolts.framework */,
+				ECAD24DC1B617BC40008844D /* Parse.framework */,
+				ECAD24DD1B617BC40008844D /* ParseCrashReporting.framework */,
+				ECAD24DE1B617BC40008844D /* ParseFacebookUtils.framework */,
+				ECAD24DF1B617BC40008844D /* ParseFacebookUtilsV4.framework */,
+				ECAD24E01B617BC40008844D /* ParseUI.framework */,
+			);
+			name = "parse-library-1-2";
+			path = "_App2/parse-library-1-2";
+			sourceTree = "<group>";
+		};
+		ECAD24EF1B617EAB0008844D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ECAD24DA1B617BC40008844D /* parse-library-1-2 */,
+				ECAD24F01B6181160008844D /* libsqlite3.dylib */,
+				ECAD24ED1B617E8E0008844D /* SystemConfiguration.framework */,
+				ECAD24EA1B617D600008844D /* CoreData.framework */,
+				ECAD24E81B617BEF0008844D /* CustomClass.m */,
+				ECAD24D81B617B870008844D /* libsqlite3.0.dylib */,
+				ECAD24D61B617B7B0008844D /* StoreKit.framework */,
+				ECAD24D41B617B6F0008844D /* Security.framework */,
+				ECAD24D21B617B6A0008844D /* QuartzCore.framework */,
+				ECAD24D01B617B5C0008844D /* MobileCoreServices.framework */,
+				ECAD24CE1B617B560008844D /* libz.1.1.3.dylib */,
+				ECAD24CC1B617B410008844D /* CoreLocation.framework */,
+				ECAD24CA1B617B380008844D /* CoreGraphics.framework */,
+				ECAD24C81B617B290008844D /* CFNetwork.framework */,
+				ECAD24C61B617B230008844D /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,10 +335,13 @@
 				ECAD246D1B6171190008844D /* Sources */,
 				ECAD246E1B6171190008844D /* Frameworks */,
 				ECAD246F1B6171190008844D /* Resources */,
+				ECF4F69B1B7149AF0026F3D6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EC7A58DA1B62D1E800D7E374 /* PBXTargetDependency */,
+				ECF4F69A1B7149AF0026F3D6 /* PBXTargetDependency */,
 			);
 			name = _App2;
 			productName = _App2;
@@ -161,6 +377,7 @@
 				TargetAttributes = {
 					ECAD24701B6171190008844D = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 37Z85A8JMP;
 					};
 					ECAD24851B6171190008844D = {
 						CreatedOnToolsVersion = 6.4;
@@ -179,6 +396,12 @@
 			mainGroup = ECAD24681B6171190008844D;
 			productRefGroup = ECAD24721B6171190008844D /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = EC7A58D01B62D1A400D7E374 /* Products */;
+					ProjectRef = EC7A58CF1B62D1A400D7E374 /* CryptoSwift.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				ECAD24701B6171190008844D /* _App2 */,
@@ -187,14 +410,32 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		EC7A58D61B62D1A400D7E374 /* CryptoSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CryptoSwift.framework;
+			remoteRef = EC7A58D51B62D1A400D7E374 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EC7A58D81B62D1A400D7E374 /* CryptoSwiftTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CryptoSwiftTests.xctest;
+			remoteRef = EC7A58D71B62D1A400D7E374 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		ECAD246F1B6171190008844D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECAD247C1B6171190008844D /* Main.storyboard in Resources */,
+				ECF159841B7287FB000F5547 /* Images.xcassets in Resources */,
 				ECAD24811B6171190008844D /* LaunchScreen.xib in Resources */,
-				ECAD247E1B6171190008844D /* Images.xcassets in Resources */,
+				ECADE2EC1B73D5160069B411 /* Words.txt in Resources */,
+				ECAD24A51B6171D90008844D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,8 +453,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECAD24791B6171190008844D /* ViewController.swift in Sources */,
+				EC38B5E21B73D9EF00158195 /* Words.txt in Sources */,
+				ECAD24A31B6171870008844D /* FingerprintCalculator.swift in Sources */,
 				ECAD24771B6171190008844D /* AppDelegate.swift in Sources */,
+				ECAD24A21B6171870008844D /* Fingerprint.swift in Sources */,
+				ECAD249A1B6171540008844D /* EncryptViewController.swift in Sources */,
+				ECAD24BF1B61724B0008844D /* RandomWordGen.swift in Sources */,
+				ECAD24C51B6172A30008844D /* PhotoTakingHelper.swift in Sources */,
+				ECAD24991B6171540008844D /* DecryptViewController.swift in Sources */,
+				ECAD249E1B61716B0008844D /* PhotoViewController.swift in Sources */,
+				ECAD24E91B617BEF0008844D /* CustomClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,29 +470,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECAD248D1B6171190008844D /* _App2Tests.swift in Sources */,
+				ECAD24EC1B617DA30008844D /* _App2Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		EC7A58DA1B62D1E800D7E374 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CryptoSwift;
+			targetProxy = EC7A58D91B62D1E800D7E374 /* PBXContainerItemProxy */;
+		};
 		ECAD24881B6171190008844D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = ECAD24701B6171190008844D /* _App2 */;
 			targetProxy = ECAD24871B6171190008844D /* PBXContainerItemProxy */;
 		};
+		ECF4F69A1B7149AF0026F3D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CryptoSwift;
+			targetProxy = ECF4F6991B7149AF0026F3D6 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		ECAD247A1B6171190008844D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ECAD247B1B6171190008844D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		ECAD247F1B6171190008844D /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -342,9 +593,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/_App2/parse-library-1-2",
+				);
 				INFOPLIST_FILE = _App2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "_App2-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -352,9 +613,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/_App2/parse-library-1-2",
+				);
 				INFOPLIST_FILE = _App2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "_App2-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -411,6 +681,7 @@
 				ECAD24921B6171190008844D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ECAD24931B6171190008844D /* Build configuration list for PBXNativeTarget "_App2Tests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +690,7 @@
 				ECAD24951B6171190008844D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
