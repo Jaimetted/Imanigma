@@ -1,4 +1,4 @@
-LICENSE
+***LICENSE***
 
 0. Subject Matter
 
