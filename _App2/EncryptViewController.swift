@@ -10,28 +10,15 @@ import UIKit
 import Parse
 import CryptoSwift
 
-extension String {
-    
-    subscript (i: Int) -> Character {
-        return self[advance(self.startIndex, i)]
-    }
-    
-    subscript (i: Int) -> String {
-        return String(self[i] as Character)
-    }
-    
-    subscript (r: Range<Int>) -> String {
-        return substringWithRange(Range(start: advance(startIndex, r.startIndex), end: advance(startIndex, r.endIndex)))
-    }
-}
-
 
 class EncryptViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
+    //@IBOutlet var spinner: UIActivityIndicatorView!
     @IBOutlet var textToHide: UITextView? = nil
     @IBOutlet var randomWordsField: UITextView?
     @IBOutlet var textView: UITextView!
     @IBOutlet var hideButton: UIButton!
+    @IBOutlet var back: UIButton!
+
     @IBOutlet var revealButton: UIButton!
     @IBOutlet var copyButton: UIButton!
     @IBOutlet var takeButton: UIButton!
@@ -44,7 +31,7 @@ class EncryptViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet var imageView: UIImageView!
     var activityViewController:UIActivityViewController?
     
-     var randomWords = ""
+    var randomWords = ""
     
     
     
@@ -56,15 +43,18 @@ class EncryptViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        //spinner.hidden = true
+        hideControllerButton.tintColor = UIColor(red: 28/255, green: 41/255, blue: 49/255, alpha: 1)
+        revealControllerButton.backgroundColor = UIColor(red: 28/255, green: 41/255, blue: 49/255, alpha: 1)
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
         
         revealButton.hidden = true
         takeButton.hidden = false
-        shareText.hidden = false
+        shareText.hidden = true
         hideButton.hidden = false
-
+        
         
         self.imagePicker.delegate = self
         imageView.layer.borderWidth = 1.0
@@ -81,15 +71,18 @@ class EncryptViewController: UIViewController, UIImagePickerControllerDelegate, 
         revealControllerButton.layer.cornerRadius = 4
         
     }
+    @IBAction func backButton(sender: AnyObject) {
+        shareText.hidden = true
+    }
     @IBAction func hideViewControllerButton(sender: AnyObject) {
-        super.viewDidLoad()
+
         self.imagePicker.delegate = self
-
+        
         hideButton.hidden = false
-
+        
         imageView.layer.borderWidth = 1.0
         takeButton.hidden = false
-        shareText.hidden = false
+        shareText.hidden = true
         revealButton.hidden = true
         
         imageView.layer.borderColor = UIColor.whiteColor().CGColor
@@ -111,15 +104,15 @@ class EncryptViewController: UIViewController, UIImagePickerControllerDelegate, 
         revealControllerButton.backgroundColor = UIColor(red: 28/255, green: 41/255, blue: 49/255, alpha: 1)
         revealControllerButton.tintColor = UIColor.whiteColor()
     }
-
+    
     @IBAction func revealControllerButton(sender: AnyObject) {
-        super.viewDidLoad()
 
-        hideControllerButton.backgroundColor = UIColor(red: 28/255, green: 41/255, blue: 49/255, alpha: 1)
         hideControllerButton.tintColor = UIColor.whiteColor()
+        hideControllerButton.backgroundColor = UIColor(red: 28/255, green: 41/255, blue: 49/255, alpha: 1)
+        
         revealControllerButton.backgroundColor = UIColor.whiteColor() //*BLUE
         revealControllerButton.tintColor = UIColor(red: 28/255, green: 41/255, blue: 49/255, alpha: 1)
-      
+        
         imageView.image = nil
         self.imagePicker.delegate = self
         revealButton.hidden = true
@@ -140,7 +133,7 @@ class EncryptViewController: UIViewController, UIImagePickerControllerDelegate, 
         hideButton.hidden = true
         revealButton.hidden = false
         textView.text = nil
-
+        
     }
     
     func keyboardWillShow(sender: NSNotification) {
@@ -163,18 +156,21 @@ class EncryptViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBAction func copyPhotoButtonTapped(sender: UIButton) {
         pasteBoard.image = imageView.image
     }
-   
+    
     @IBAction func clearImageButtonTapped(sender: AnyObject) {
         imageView.image = nil
         takeButton.hidden = false
         loadButton.hidden = false
-       }
+        shareText.hidden = true
+        
+    }
     //Paste image
     @IBAction func pasteImageButtonTapped(sender: AnyObject) {
         if var img = pasteBoard.image{
             imageView?.image = pasteBoard.image
-                    }
+        }
         else{
+            
             var alert = UIAlertController(title: "ERROR", message:"No Photo Copied", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
@@ -183,11 +179,12 @@ class EncryptViewController: UIViewController, UIImagePickerControllerDelegate, 
     //Hide message inside image
     
     @IBAction func hideButtonTapped(sender: AnyObject) {
+        shareText.hidden = false
         
         if(textToHide?.text != nil){
             message = textToHide!.text
         }
-              if(imageView?.image == nil || textToHide?.text == nil){
+        if(imageView?.image == nil || textToHide?.text == nil){
             var alert = UIAlertController(title: "ERROR", message:"No Photo Selected", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
@@ -195,13 +192,18 @@ class EncryptViewController: UIViewController, UIImagePickerControllerDelegate, 
         else{
             var image = imageView.image
             
-            var randomWords = randomWordGen.generate() + "." + randomWordGen.generate() + "." + randomWordGen.generate() + "." + randomWordGen.generate()
+            var randomWords = randomWordGen.generate() + " " + randomWordGen.generate() + " " + randomWordGen.generate() + " " + randomWordGen.generate()
             
             var alert = UIAlertController(title: "Password", message: (randomWords), preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)//same time as getting hash code
+            randomWords = randomWords.lowercaseString
+            println(randomWords)
             
-
+            randomWords = randomWords.stringByReplacingOccurrencesOfString(" ", withString: "-", options: nil, range: nil)
+            println(randomWords)
+            
+            
             
             //Background stuff
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
@@ -336,27 +338,16 @@ class EncryptViewController: UIViewController, UIImagePickerControllerDelegate, 
         
     }
     @IBAction func revealButtonTapped(sender: AnyObject) {
+        
         if(randomWordsField?.text != nil){
             randomWords = randomWordsField!.text
-    println(randomWords)
             //random words to lower
             randomWords = randomWords.lowercaseString
-            println(randomWords)
-
+            
             randomWords = randomWords.stringByReplacingOccurrencesOfString(" ", withString: "-", options: nil, range: nil)
-            println(randomWords)
-
-//            var length = count(randomWords)
-//            for(var i = 0; i < length; ++i){
-//                if(randomWords[i] == " ")
-//                {
-//                    randomWords[i] = "-"
-//                }
-//                
-//            }
-            
-            
+          
         }
+       
         
         if(imageView?.image == nil){
             var alert = UIAlertController(title: "ERROR", message:"No Photo Selected", preferredStyle: UIAlertControllerStyle.Alert)
@@ -364,6 +355,7 @@ class EncryptViewController: UIViewController, UIImagePickerControllerDelegate, 
             self.presentViewController(alert, animated: true, completion: nil)
         }
         else{
+            
             var image = imageView.image
             
             
@@ -465,7 +457,6 @@ class EncryptViewController: UIViewController, UIImagePickerControllerDelegate, 
             }
             let messageIdText = NSData(bytes: messageIDBytes, length: messageIDBytes.count)
             let messageID = messageIdText.base64EncodedStringWithOptions(nil)
-            println(messageID)
             //   println(messageID)
             
             
@@ -482,8 +473,7 @@ class EncryptViewController: UIViewController, UIImagePickerControllerDelegate, 
             //   println(post?.objectForKey("message"))
             var textToDecrypt = post?.objectForKey("message") as? String//not as string...
             //----------Query from Parse----------
-            println("Decryption...")
-            println(messageKey)
+           
             if textToDecrypt == nil{
                 
                 var alert = UIAlertController(title: "Error", message: ("No Match"), preferredStyle: UIAlertControllerStyle.Alert)
@@ -491,6 +481,7 @@ class EncryptViewController: UIViewController, UIImagePickerControllerDelegate, 
                 self.presentViewController(alert, animated: true, completion: nil)
                 
             }
+                
             else{
                 
                 //------------------Decryption------------------
@@ -508,14 +499,17 @@ class EncryptViewController: UIViewController, UIImagePickerControllerDelegate, 
                 }
                 //------------------Decryption------------------
             }
+            
+
         }
-        
         func textViewDidBeginEditing(textToHide: UITextView) {
             animateViewMoving(true, moveValue: 100)
         }
         func textViewDidEndEditing(textToHide: UITextView) {
             animateViewMoving(false, moveValue: 100)
         }
+        
+        
     }
     func animateViewMoving (up:Bool, moveValue :CGFloat){
         var movementDuration:NSTimeInterval = 0.3
@@ -531,7 +525,7 @@ class EncryptViewController: UIViewController, UIImagePickerControllerDelegate, 
         var image: UIImage!
         if picker.allowsEditing {
             image = info[UIImagePickerControllerEditedImage] as! UIImage
-        
+            
         } else {
             image = info[UIImagePickerControllerOriginalImage] as! UIImage
         }
@@ -544,10 +538,8 @@ class EncryptViewController: UIViewController, UIImagePickerControllerDelegate, 
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-    //si no hay imagen, error
-    //cabiar colores de view controller buttons
-    //paste rotation
     @IBAction func shareText(sender: UIButton) {
+        
         let shareImage: UIImage = imageView.image!
         var imageArray : [UIImage] = [shareImage]
         let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: imageArray, applicationActivities: nil)
@@ -555,11 +547,11 @@ class EncryptViewController: UIViewController, UIImagePickerControllerDelegate, 
         activityViewController.excludedActivityTypes = [UIActivityTypeCopyToPasteboard]
         if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.Phone) {
             self.presentViewController(activityViewController, animated: true, completion: nil)
-        } else { //if iPad
-            // Change Rect to position Popover
+        }
+        else {
+            //if iPad
             var popoverCntlr = UIPopoverController(contentViewController: activityViewController)
             popoverCntlr.presentPopoverFromRect(CGRectMake(self.view.frame.size.width/2, self.view.frame.size.height/4, 0, 0), inView: self.view, permittedArrowDirections: UIPopoverArrowDirection.Any, animated: true)
-            
         }
     }
 }

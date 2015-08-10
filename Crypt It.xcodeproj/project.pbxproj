@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EC38B5E21B73D9EF00158195 /* Words.txt in Sources */ = {isa = PBXBuildFile; fileRef = ECADE2EB1B73D5160069B411 /* Words.txt */; };
-		EC38B5E51B73DAC000158195 /* Words.txt in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ECADE2EB1B73D5160069B411 /* Words.txt */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		EC38B5E71B73DC8400158195 /* Words.txt in Frameworks */ = {isa = PBXBuildFile; fileRef = EC38B5E61B73DC6700158195 /* Words.txt */; };
 		ECAD24771B6171190008844D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAD24761B6171190008844D /* AppDelegate.swift */; };
 		ECAD24811B6171190008844D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECAD247F1B6171190008844D /* LaunchScreen.xib */; };
 		ECAD24991B6171540008844D /* DecryptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAD24971B6171540008844D /* DecryptViewController.swift */; };
@@ -37,15 +34,10 @@
 		ECAD24E51B617BC40008844D /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAD24DF1B617BC40008844D /* ParseFacebookUtilsV4.framework */; };
 		ECAD24E61B617BC40008844D /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAD24E01B617BC40008844D /* ParseUI.framework */; };
 		ECAD24E91B617BEF0008844D /* CustomClass.m in Sources */ = {isa = PBXBuildFile; fileRef = ECAD24E81B617BEF0008844D /* CustomClass.m */; };
-		ECAD24EB1B617D600008844D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAD24EA1B617D600008844D /* CoreData.framework */; };
-		ECAD24EC1B617DA30008844D /* _App2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAD248C1B6171190008844D /* _App2Tests.swift */; };
-		ECAD24EE1B617E8E0008844D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAD24ED1B617E8E0008844D /* SystemConfiguration.framework */; };
-		ECAD24F11B6181160008844D /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAD24F01B6181160008844D /* libsqlite3.dylib */; };
 		ECAD24F21B6187260008844D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAD24ED1B617E8E0008844D /* SystemConfiguration.framework */; };
 		ECADE2EC1B73D5160069B411 /* Words.txt in Resources */ = {isa = PBXBuildFile; fileRef = ECADE2EB1B73D5160069B411 /* Words.txt */; };
 		ECF159841B7287FB000F5547 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECF159831B7287FB000F5547 /* Images.xcassets */; };
 		ECF4F6951B7148390026F3D6 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7A58D61B62D1A400D7E374 /* CryptoSwift.framework */; };
-		ECF4F6961B7148DC0026F3D6 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7A58D61B62D1A400D7E374 /* CryptoSwift.framework */; };
 		ECF4F6971B7149AF0026F3D6 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7A58D61B62D1A400D7E374 /* CryptoSwift.framework */; };
 		ECF4F6981B7149AF0026F3D6 /* CryptoSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EC7A58D61B62D1A400D7E374 /* CryptoSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -72,13 +64,6 @@
 			remoteGlobalIDString = 754BE45419693E190098E6F3;
 			remoteInfo = CryptoSwift;
 		};
-		ECAD24871B6171190008844D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ECAD24691B6171190008844D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = ECAD24701B6171190008844D;
-			remoteInfo = _App2;
-		};
 		ECF4F6991B7149AF0026F3D6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EC7A58CF1B62D1A400D7E374 /* CryptoSwift.xcodeproj */;
@@ -95,7 +80,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EC38B5E51B73DAC000158195 /* Words.txt in Embed Frameworks */,
 				ECF4F6981B7149AF0026F3D6 /* CryptoSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -106,11 +90,10 @@
 /* Begin PBXFileReference section */
 		EC38B5E61B73DC6700158195 /* Words.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = Words.txt; path = _App2/Words.txt; sourceTree = "<group>"; };
 		EC7A58CF1B62D1A400D7E374 /* CryptoSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CryptoSwift.xcodeproj; path = CryptoSwift/CryptoSwift.xcodeproj; sourceTree = SOURCE_ROOT; };
-		ECAD24711B6171190008844D /* _App2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = _App2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECAD24711B6171190008844D /* Crypt It.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crypt It.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECAD24751B6171190008844D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECAD24761B6171190008844D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECAD24801B6171190008844D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		ECAD24861B6171190008844D /* _App2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = _App2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECAD248B1B6171190008844D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECAD248C1B6171190008844D /* _App2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _App2Tests.swift; sourceTree = "<group>"; };
 		ECAD24971B6171540008844D /* DecryptViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecryptViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -151,7 +134,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC38B5E71B73DC8400158195 /* Words.txt in Frameworks */,
 				ECF4F6951B7148390026F3D6 /* CryptoSwift.framework in Frameworks */,
 				ECAD24F21B6187260008844D /* SystemConfiguration.framework in Frameworks */,
 				ECAD24E41B617BC40008844D /* ParseFacebookUtils.framework in Frameworks */,
@@ -171,17 +153,6 @@
 				ECAD24C71B617B230008844D /* AudioToolbox.framework in Frameworks */,
 				ECAD24E31B617BC40008844D /* ParseCrashReporting.framework in Frameworks */,
 				ECAD24E51B617BC40008844D /* ParseFacebookUtilsV4.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		ECAD24831B6171190008844D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ECF4F6961B7148DC0026F3D6 /* CryptoSwift.framework in Frameworks */,
-				ECAD24F11B6181160008844D /* libsqlite3.dylib in Frameworks */,
-				ECAD24EE1B617E8E0008844D /* SystemConfiguration.framework in Frameworks */,
-				ECAD24EB1B617D600008844D /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,8 +184,7 @@
 		ECAD24721B6171190008844D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ECAD24711B6171190008844D /* _App2.app */,
-				ECAD24861B6171190008844D /* _App2Tests.xctest */,
+				ECAD24711B6171190008844D /* Crypt It.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -328,9 +298,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		ECAD24701B6171190008844D /* _App2 */ = {
+		ECAD24701B6171190008844D /* Crypt It */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ECAD24901B6171190008844D /* Build configuration list for PBXNativeTarget "_App2" */;
+			buildConfigurationList = ECAD24901B6171190008844D /* Build configuration list for PBXNativeTarget "Crypt It" */;
 			buildPhases = (
 				ECAD246D1B6171190008844D /* Sources */,
 				ECAD246E1B6171190008844D /* Frameworks */,
@@ -343,28 +313,10 @@
 				EC7A58DA1B62D1E800D7E374 /* PBXTargetDependency */,
 				ECF4F69A1B7149AF0026F3D6 /* PBXTargetDependency */,
 			);
-			name = _App2;
+			name = "Crypt It";
 			productName = _App2;
-			productReference = ECAD24711B6171190008844D /* _App2.app */;
+			productReference = ECAD24711B6171190008844D /* Crypt It.app */;
 			productType = "com.apple.product-type.application";
-		};
-		ECAD24851B6171190008844D /* _App2Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = ECAD24931B6171190008844D /* Build configuration list for PBXNativeTarget "_App2Tests" */;
-			buildPhases = (
-				ECAD24821B6171190008844D /* Sources */,
-				ECAD24831B6171190008844D /* Frameworks */,
-				ECAD24841B6171190008844D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				ECAD24881B6171190008844D /* PBXTargetDependency */,
-			);
-			name = _App2Tests;
-			productName = _App2Tests;
-			productReference = ECAD24861B6171190008844D /* _App2Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -379,13 +331,9 @@
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = 37Z85A8JMP;
 					};
-					ECAD24851B6171190008844D = {
-						CreatedOnToolsVersion = 6.4;
-						TestTargetID = ECAD24701B6171190008844D;
-					};
 				};
 			};
-			buildConfigurationList = ECAD246C1B6171190008844D /* Build configuration list for PBXProject "_App2" */;
+			buildConfigurationList = ECAD246C1B6171190008844D /* Build configuration list for PBXProject "Crypt It" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -404,8 +352,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				ECAD24701B6171190008844D /* _App2 */,
-				ECAD24851B6171190008844D /* _App2Tests */,
+				ECAD24701B6171190008844D /* Crypt It */,
 			);
 		};
 /* End PBXProject section */
@@ -439,13 +386,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ECAD24841B6171190008844D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -453,7 +393,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC38B5E21B73D9EF00158195 /* Words.txt in Sources */,
 				ECAD24A31B6171870008844D /* FingerprintCalculator.swift in Sources */,
 				ECAD24771B6171190008844D /* AppDelegate.swift in Sources */,
 				ECAD24A21B6171870008844D /* Fingerprint.swift in Sources */,
@@ -466,14 +405,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ECAD24821B6171190008844D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ECAD24EC1B617DA30008844D /* _App2Tests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -481,11 +412,6 @@
 			isa = PBXTargetDependency;
 			name = CryptoSwift;
 			targetProxy = EC7A58D91B62D1E800D7E374 /* PBXContainerItemProxy */;
-		};
-		ECAD24881B6171190008844D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = ECAD24701B6171190008844D /* _App2 */;
-			targetProxy = ECAD24871B6171190008844D /* PBXContainerItemProxy */;
 		};
 		ECF4F69A1B7149AF0026F3D6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -602,7 +528,7 @@
 				);
 				INFOPLIST_FILE = _App2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Crypt It";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "_App2-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -614,58 +540,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Jaimetted Olivieri (37Z85A8JMP)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/_App2/parse-library-1-2",
 				);
 				INFOPLIST_FILE = _App2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PRODUCT_NAME = "Crypt It";
+				PROVISIONING_PROFILE = "855dae53-d180-4cd0-8114-c37477805cec";
 				SWIFT_OBJC_BRIDGING_HEADER = "_App2-Bridging-Header.h";
-			};
-			name = Release;
-		};
-		ECAD24941B6171190008844D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = _App2Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/_App2.app/_App2";
-			};
-			name = Debug;
-		};
-		ECAD24951B6171190008844D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = _App2Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/_App2.app/_App2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ECAD246C1B6171190008844D /* Build configuration list for PBXProject "_App2" */ = {
+		ECAD246C1B6171190008844D /* Build configuration list for PBXProject "Crypt It" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ECAD248E1B6171190008844D /* Debug */,
@@ -674,20 +565,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ECAD24901B6171190008844D /* Build configuration list for PBXNativeTarget "_App2" */ = {
+		ECAD24901B6171190008844D /* Build configuration list for PBXNativeTarget "Crypt It" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ECAD24911B6171190008844D /* Debug */,
 				ECAD24921B6171190008844D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		ECAD24931B6171190008844D /* Build configuration list for PBXNativeTarget "_App2Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				ECAD24941B6171190008844D /* Debug */,
-				ECAD24951B6171190008844D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:_App2.xcodeproj">
+      location = "self:/Users/intern/Desktop/_App2 UI/Crypt It.xcodeproj">
    </FileRef>
 </Workspace>
