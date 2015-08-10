@@ -1,8 +1,8 @@
-***LICENSE***
+LICENSE
 
 0. Subject Matter
 
-This License applies to the computer program known as "Aladdin Ghostscript." The "Program", below, refers to such program. The Program is a copyrighted work whose copyright is held by Aladdin Enterprises (the "Licensor"). Please note that Aladdin Ghostscript is neither the program known as "GNU Ghostscript" nor the version of Ghostscript available for commercial licensing from Artifex Software Inc.
+This License applies to the computer program known as "AFPL Ghostscript." The "Program", below, refers to such program. The Program is a copyrighted work whose copyright is held by artofcode LLC, located in Benicia, California (the "Licensor"). Please note that AFPL Ghostscript is neither the program known as "GPL Ghostscript" nor the version of Ghostscript available for commercial licensing from Artifex Software Inc.
 
 A "work based on the Program" means either the Program or any derivative work of the Program, as defined in the United States Copyright Act of 1976, such as a translation or a modification.
 
