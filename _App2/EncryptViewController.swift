@@ -12,13 +12,14 @@ import CryptoSwift
 
 
 class EncryptViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    //@IBOutlet var spinner: UIActivityIndicatorView!
+    @IBOutlet var spinner: UIActivityIndicatorView!
     @IBOutlet var textToHide: UITextView? = nil
     @IBOutlet var randomWordsField: UITextView?
     @IBOutlet var textView: UITextView!
     @IBOutlet var hideButton: UIButton!
     @IBOutlet var back: UIButton!
-
+    @IBOutlet var enterMessageLabel: UILabel!
+    @IBOutlet var enterPasswordLabel: UILabel!
     @IBOutlet var revealButton: UIButton!
     @IBOutlet var copyButton: UIButton!
     @IBOutlet var takeButton: UIButton!
@@ -32,9 +33,7 @@ class EncryptViewController: UIViewController, UIImagePickerControllerDelegate, 
     var activityViewController:UIActivityViewController?
     
     var randomWords = ""
-    
-    
-    
+
     var message: String?
     var imagePicker = UIImagePickerController()
     let calculator = FingerprintCalculator()
@@ -43,70 +42,87 @@ class EncryptViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //spinner.hidden = true
+        
+        self.imagePicker.delegate = self
+        
+        //Hidding buttons
+        spinner.hidden = true
+        enterMessageLabel.hidden = false
+        enterPasswordLabel.hidden = true
+        revealButton.hidden = true
+        takeButton.hidden = false
+        shareText.hidden = true
+        hideButton.hidden = false
+        
+        //Changing button colors
+        textToHide?.layer.borderColor = UIColor.whiteColor().CGColor
+        hideControllerButton.layer.borderColor = UIColor.whiteColor().CGColor
+        imageView.layer.borderColor = UIColor.whiteColor().CGColor
+        revealControllerButton.layer.borderColor = UIColor.whiteColor().CGColor
+
         hideControllerButton.tintColor = UIColor(red: 28/255, green: 41/255, blue: 49/255, alpha: 1)
         revealControllerButton.backgroundColor = UIColor(red: 28/255, green: 41/255, blue: 49/255, alpha: 1)
+    
+        //Changing button borders
+        imageView.layer.borderWidth = 1.0
+        textToHide?.layer.borderWidth = 1.0
+        imageView.layer.cornerRadius = 4
+        textToHide?.layer.cornerRadius = 4
+        hideControllerButton.layer.borderWidth = 1.0
+        revealControllerButton.layer.borderWidth = 1.0
+        hideControllerButton.layer.cornerRadius = 4
+        revealControllerButton.layer.cornerRadius = 4
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
-        
-        revealButton.hidden = true
-        takeButton.hidden = false
-        shareText.hidden = true
-        hideButton.hidden = false
-        
-        
-        self.imagePicker.delegate = self
-        imageView.layer.borderWidth = 1.0
-        imageView.layer.borderColor = UIColor.whiteColor().CGColor
-        textToHide?.layer.borderWidth = 1.0
-        textToHide?.layer.borderColor = UIColor.whiteColor().CGColor
-        imageView.layer.cornerRadius = 4
-        textToHide?.layer.cornerRadius = 4
-        hideControllerButton.layer.borderWidth = 1.0
-        hideControllerButton.layer.borderColor = UIColor.whiteColor().CGColor
-        revealControllerButton.layer.borderWidth = 1.0
-        revealControllerButton.layer.borderColor = UIColor.whiteColor().CGColor
-        hideControllerButton.layer.cornerRadius = 4
-        revealControllerButton.layer.cornerRadius = 4
-        
     }
+    
     @IBAction func backButton(sender: AnyObject) {
         shareText.hidden = true
     }
+    
     @IBAction func hideViewControllerButton(sender: AnyObject) {
-
+        
         self.imagePicker.delegate = self
         
-        hideButton.hidden = false
-        
-        imageView.layer.borderWidth = 1.0
+       //Hidding buttons
+        enterMessageLabel.hidden = false
+        enterPasswordLabel.hidden = true
         takeButton.hidden = false
         shareText.hidden = true
         revealButton.hidden = true
-        
-        imageView.layer.borderColor = UIColor.whiteColor().CGColor
-        textToHide?.layer.borderWidth = 1.0
-        textToHide?.layer.borderColor = UIColor.whiteColor().CGColor
-        imageView.layer.cornerRadius = 4
-        textToHide?.layer.cornerRadius = 4
-        hideControllerButton.layer.borderWidth = 1.0
-        hideControllerButton.layer.borderColor = UIColor.whiteColor().CGColor
-        revealControllerButton.layer.borderWidth = 1.0
-        revealControllerButton.layer.borderColor = UIColor.whiteColor().CGColor
-        hideControllerButton.layer.cornerRadius = 4
-        revealControllerButton.layer.cornerRadius = 4
+        hideButton.hidden = false
         imageView.image = nil
         randomWordsField?.text = nil
-        imageView.image = nil
+       //Changing button colors
+        
+        imageView.layer.borderColor = UIColor.whiteColor().CGColor
+        textToHide?.layer.borderColor = UIColor.whiteColor().CGColor
+        hideControllerButton.layer.borderColor = UIColor.whiteColor().CGColor
+        revealControllerButton.layer.borderColor = UIColor.whiteColor().CGColor
+        revealControllerButton.tintColor = UIColor.whiteColor()
         hideControllerButton.backgroundColor = UIColor.whiteColor()
         hideControllerButton.tintColor = UIColor(red: 28/255, green: 41/255, blue: 49/255, alpha: 1)
         revealControllerButton.backgroundColor = UIColor(red: 28/255, green: 41/255, blue: 49/255, alpha: 1)
-        revealControllerButton.tintColor = UIColor.whiteColor()
+        //Changing button borders
+        imageView.layer.borderWidth = 1.0
+        textToHide?.layer.borderWidth = 1.0
+        imageView.layer.cornerRadius = 4
+        textToHide?.layer.cornerRadius = 4
+        hideControllerButton.layer.borderWidth = 1.0
+        revealControllerButton.layer.borderWidth = 1.0
+        hideControllerButton.layer.cornerRadius = 4
+        revealControllerButton.layer.cornerRadius = 4
+   
+
+       
+        
     }
     
     @IBAction func revealControllerButton(sender: AnyObject) {
-
+        enterMessageLabel.hidden = true
+        enterPasswordLabel.hidden = false
+        
         hideControllerButton.tintColor = UIColor.whiteColor()
         hideControllerButton.backgroundColor = UIColor(red: 28/255, green: 41/255, blue: 49/255, alpha: 1)
         
@@ -142,6 +158,7 @@ class EncryptViewController: UIViewController, UIImagePickerControllerDelegate, 
     func keyboardWillHide(sender: NSNotification) {
         self.view.frame.origin.y += 250
     }
+    
     //Take Photo - > Button
     @IBAction func takePhotoButtonTapped(sender: UIButton) {
         self.imagePicker.sourceType = .Camera
@@ -188,23 +205,22 @@ class EncryptViewController: UIViewController, UIImagePickerControllerDelegate, 
             var alert = UIAlertController(title: "ERROR", message:"No Photo Selected", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
+            shareText.hidden = true
         }
         else{
             var image = imageView.image
-            
-            var randomWords = randomWordGen.generate() + " " + randomWordGen.generate() + " " + randomWordGen.generate() + " " + randomWordGen.generate()
+
+            var randomWords = randomWordGen.generate() + " " + randomWordGen.generate() + " " + randomWordGen.generate() ///+ " " + randomWordGen.generate()
             
             var alert = UIAlertController(title: "Password", message: (randomWords), preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)//same time as getting hash code
+            self.presentViewController(alert, animated: true, completion: nil)
+            
             randomWords = randomWords.lowercaseString
             println(randomWords)
-            
             randomWords = randomWords.stringByReplacingOccurrencesOfString(" ", withString: "-", options: nil, range: nil)
             println(randomWords)
-            
-            
-            
+                
             //Background stuff
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
                 
@@ -353,6 +369,8 @@ class EncryptViewController: UIViewController, UIImagePickerControllerDelegate, 
             var alert = UIAlertController(title: "ERROR", message:"No Photo Selected", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
+            shareText.hidden = true
+
         }
         else{
             
