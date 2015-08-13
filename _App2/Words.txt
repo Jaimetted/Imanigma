@@ -1,9 +1,6 @@
 
 Adult
-Aeroplane
 Air
-Aircraft Carrier
-Airforce
 Airport
 Album
 Alphabet
@@ -72,21 +69,13 @@ Eraser
 Explosive
 Eyes
 Family
-
 Fan
-
 Feather
-
 Festival
-
 Film
-
 Finger
-
 Fire
-
 Flower
-
 Foot
 Fork
 Freeway

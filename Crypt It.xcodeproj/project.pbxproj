@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC6A897A1B7C1F0C009A50A0 /* ParseKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC6A89791B7C1F0C009A50A0 /* ParseKey.plist */; };
 		ECAD24771B6171190008844D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAD24761B6171190008844D /* AppDelegate.swift */; };
 		ECAD24811B6171190008844D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECAD247F1B6171190008844D /* LaunchScreen.xib */; };
 		ECAD24991B6171540008844D /* DecryptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAD24971B6171540008844D /* DecryptViewController.swift */; };
@@ -35,7 +36,6 @@
 		ECAD24E61B617BC40008844D /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAD24E01B617BC40008844D /* ParseUI.framework */; };
 		ECAD24E91B617BEF0008844D /* CustomClass.m in Sources */ = {isa = PBXBuildFile; fileRef = ECAD24E81B617BEF0008844D /* CustomClass.m */; };
 		ECAD24F21B6187260008844D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAD24ED1B617E8E0008844D /* SystemConfiguration.framework */; };
-		ECADE2EC1B73D5160069B411 /* Words.txt in Resources */ = {isa = PBXBuildFile; fileRef = ECADE2EB1B73D5160069B411 /* Words.txt */; };
 		ECF159841B7287FB000F5547 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECF159831B7287FB000F5547 /* Images.xcassets */; };
 		ECF4F6951B7148390026F3D6 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7A58D61B62D1A400D7E374 /* CryptoSwift.framework */; };
 		ECF4F6971B7149AF0026F3D6 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7A58D61B62D1A400D7E374 /* CryptoSwift.framework */; };
@@ -88,7 +88,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		EC38B5E61B73DC6700158195 /* Words.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = Words.txt; path = _App2/Words.txt; sourceTree = "<group>"; };
+		EC38B5E61B73DC6700158195 /* Words.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Words.txt; sourceTree = "<group>"; };
+		EC6A89791B7C1F0C009A50A0 /* ParseKey.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ParseKey.plist; sourceTree = "<group>"; };
 		EC7A58CF1B62D1A400D7E374 /* CryptoSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CryptoSwift.xcodeproj; path = CryptoSwift/CryptoSwift.xcodeproj; sourceTree = SOURCE_ROOT; };
 		ECAD24711B6171190008844D /* Crypt It.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crypt It.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECAD24751B6171190008844D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -125,7 +126,6 @@
 		ECAD24EA1B617D600008844D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		ECAD24ED1B617E8E0008844D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		ECAD24F01B6181160008844D /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		ECADE2EB1B73D5160069B411 /* Words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Words.txt; sourceTree = "<group>"; };
 		ECF159831B7287FB000F5547 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = _App2/Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -171,7 +171,6 @@
 		ECAD24681B6171190008844D = {
 			isa = PBXGroup;
 			children = (
-				EC38B5E61B73DC6700158195 /* Words.txt */,
 				ECF159831B7287FB000F5547 /* Images.xcassets */,
 				ECAD24EF1B617EAB0008844D /* Frameworks */,
 				ECAD24731B6171190008844D /* _App2 */,
@@ -193,10 +192,10 @@
 			isa = PBXGroup;
 			children = (
 				EC7A58CF1B62D1A400D7E374 /* CryptoSwift.xcodeproj */,
+				ECAD24761B6171190008844D /* AppDelegate.swift */,
 				ECAD24C31B61728F0008844D /* PhotoTaking */,
 				ECAD249F1B6171710008844D /* ImageComparison */,
 				ECAD24961B61713F0008844D /* ViewControllers */,
-				ECAD24761B6171190008844D /* AppDelegate.swift */,
 				ECAD24A41B6171D90008844D /* Main.storyboard */,
 				ECAD247F1B6171190008844D /* LaunchScreen.xib */,
 				ECAD24741B6171190008844D /* Supporting Files */,
@@ -208,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				ECAD24751B6171190008844D /* Info.plist */,
+				EC6A89791B7C1F0C009A50A0 /* ParseKey.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -242,9 +242,9 @@
 		ECAD249F1B6171710008844D /* ImageComparison */ = {
 			isa = PBXGroup;
 			children = (
+				EC38B5E61B73DC6700158195 /* Words.txt */,
 				ECAD24A01B6171870008844D /* Fingerprint.swift */,
 				ECAD24B21B61724B0008844D /* RandomWordGen.swift */,
-				ECADE2EB1B73D5160069B411 /* Words.txt */,
 				ECAD24A11B6171870008844D /* FingerprintCalculator.swift */,
 			);
 			name = ImageComparison;
@@ -379,9 +379,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC6A897A1B7C1F0C009A50A0 /* ParseKey.plist in Resources */,
 				ECF159841B7287FB000F5547 /* Images.xcassets in Resources */,
 				ECAD24811B6171190008844D /* LaunchScreen.xib in Resources */,
-				ECADE2EC1B73D5160069B411 /* Words.txt in Resources */,
 				ECAD24A51B6171D90008844D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

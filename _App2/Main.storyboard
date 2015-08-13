@@ -44,7 +44,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="38" id="aii-Cb-p7x"/>
                                 </constraints>
-                                <state key="normal" image="Share-50">
+                                <state key="normal" title="Share Button" image="Share-50">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -58,7 +58,7 @@
                                     <constraint firstAttribute="width" constant="20" id="GO6-sA-UKU"/>
                                     <constraint firstAttribute="height" constant="20" id="kCI-eD-tX6"/>
                                 </constraints>
-                                <state key="normal" image="Cancel-50-2">
+                                <state key="normal" title="Clear Button" image="Cancel-50-2">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -69,13 +69,13 @@
                                 <rect key="frame" x="429" y="201" width="38" height="135"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Fm-Ik-cqS">
-                                        <rect key="frame" x="0.0" y="0.0" width="38" height="38"/>
+                                        <rect key="frame" x="0.0" y="-5" width="38" height="38"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="38" id="6AA-k3-0ta"/>
                                             <constraint firstAttribute="height" constant="38" id="Moy-xc-WRx"/>
                                             <constraint firstAttribute="width" constant="38" id="yac-Az-bpV"/>
                                         </constraints>
-                                        <state key="normal" image="Camera-50-3">
+                                        <state key="normal" title="Camera Button" image="Camera-50-3">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -83,12 +83,12 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WWw-gy-zrt">
-                                        <rect key="frame" x="0.0" y="92" width="38" height="38"/>
+                                        <rect key="frame" x="0.0" y="97" width="38" height="38"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="38" id="CHG-So-gkD"/>
                                             <constraint firstAttribute="height" constant="38" id="MpX-fb-2NN"/>
                                         </constraints>
-                                        <state key="normal" image="Paste-50-2">
+                                        <state key="normal" title="Paste Button" image="Paste-50-2">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -96,12 +96,12 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8db-OV-ebr">
-                                        <rect key="frame" x="0.0" y="41" width="38" height="38"/>
+                                        <rect key="frame" x="0.0" y="49" width="38" height="38"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="38" id="aPi-XZ-xMT"/>
                                             <constraint firstAttribute="height" constant="38" id="ooq-gB-5P0"/>
                                         </constraints>
-                                        <state key="normal" image="Upload-50">
+                                        <state key="normal" title="Add Image Button" image="Add Image-50">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -113,15 +113,15 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="38" id="Caq-yj-eup"/>
                                     <constraint firstItem="8db-OV-ebr" firstAttribute="leading" secondItem="DB9-oE-SYm" secondAttribute="leading" id="ENl-q5-F3Y"/>
-                                    <constraint firstItem="9Fm-Ik-cqS" firstAttribute="top" secondItem="DB9-oE-SYm" secondAttribute="top" id="HZO-ZN-wJk"/>
+                                    <constraint firstItem="9Fm-Ik-cqS" firstAttribute="top" secondItem="DB9-oE-SYm" secondAttribute="top" constant="-5" id="HZO-ZN-wJk"/>
                                     <constraint firstAttribute="height" constant="135" id="LBz-y4-FGZ"/>
                                     <constraint firstItem="9Fm-Ik-cqS" firstAttribute="leading" secondItem="DB9-oE-SYm" secondAttribute="leading" id="S0g-tx-pJg"/>
                                     <constraint firstItem="WWw-gy-zrt" firstAttribute="leading" secondItem="DB9-oE-SYm" secondAttribute="leading" id="fBl-Jx-wcM"/>
-                                    <constraint firstItem="8db-OV-ebr" firstAttribute="top" secondItem="9Fm-Ik-cqS" secondAttribute="bottom" constant="3" id="hUJ-o5-hgo"/>
-                                    <constraint firstItem="WWw-gy-zrt" firstAttribute="top" secondItem="8db-OV-ebr" secondAttribute="bottom" constant="13" id="qvf-IR-wJh"/>
+                                    <constraint firstItem="8db-OV-ebr" firstAttribute="top" secondItem="9Fm-Ik-cqS" secondAttribute="bottom" constant="16" id="hUJ-o5-hgo"/>
+                                    <constraint firstItem="WWw-gy-zrt" firstAttribute="top" secondItem="8db-OV-ebr" secondAttribute="bottom" constant="10" id="qvf-IR-wJh"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1OK-J8-p9h">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1OK-J8-p9h">
                                 <rect key="frame" x="191" y="65" width="110" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -142,7 +142,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tC7-i9-CCn">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tC7-i9-CCn">
                                 <rect key="frame" x="301" y="65" width="110" height="30"/>
                                 <color key="backgroundColor" red="0.10980392160000001" green="0.16078431369999999" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -156,7 +156,7 @@
                                     <action selector="revealControllerButton:" destination="Ocv-jB-4LX" eventType="touchUpInside" id="VQ0-We-MeD"/>
                                 </connections>
                             </button>
-                            <view alpha="0.0" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m5f-1D-Beb">
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m5f-1D-Beb">
                                 <rect key="frame" x="301" y="65" width="0.0" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -196,7 +196,7 @@
                                     <constraint firstAttribute="width" secondItem="3RI-jp-o2P" secondAttribute="height" multiplier="1:1" id="YWh-eX-kD1"/>
                                     <constraint firstAttribute="width" constant="22" id="ghI-TH-dBJ"/>
                                 </constraints>
-                                <state key="normal" image="View Details-50-2">
+                                <state key="normal" title="Attribution Button" image="View Details-50-2">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -239,7 +239,7 @@
                             <constraint firstItem="4Ap-CJ-CY1" firstAttribute="centerX" secondItem="HT7-2Y-PHU" secondAttribute="centerX" constant="-63" id="KLy-gX-GFl"/>
                             <constraint firstItem="981-yR-Ht7" firstAttribute="top" secondItem="dTm-VU-26Z" secondAttribute="bottom" constant="263" id="Mgp-DN-mwh"/>
                             <constraint firstItem="h8K-LZ-Noc" firstAttribute="centerX" secondItem="HT7-2Y-PHU" secondAttribute="centerX" id="OBe-oF-pqA"/>
-                            <constraint firstAttribute="centerX" secondItem="m5f-1D-Beb" secondAttribute="centerX" id="OMr-3d-TVt"/>
+                            <constraint firstAttribute="centerX" secondItem="m5f-1D-Beb" secondAttribute="centerX" constant="-1" id="OMr-3d-TVt"/>
                             <constraint firstAttribute="bottom" secondItem="m5f-1D-Beb" secondAttribute="bottom" constant="534" id="P1M-my-0nk"/>
                             <constraint firstItem="4Ap-CJ-CY1" firstAttribute="centerY" secondItem="HT7-2Y-PHU" secondAttribute="centerY" constant="-72.5" id="QGc-1m-mj5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3RI-jp-o2P" secondAttribute="trailing" constant="44" id="QXB-vv-qmP"/>
@@ -252,7 +252,7 @@
                             <constraint firstItem="tC7-i9-CCn" firstAttribute="trailing" secondItem="KHM-1t-kVN" secondAttribute="trailing" constant="51" id="Zku-7G-nog"/>
                             <constraint firstItem="t8S-sm-fby" firstAttribute="top" secondItem="981-yR-Ht7" secondAttribute="bottom" constant="279" id="bGV-wb-Kyr"/>
                             <constraint firstItem="1OK-J8-p9h" firstAttribute="leading" secondItem="KHM-1t-kVN" secondAttribute="leading" constant="-34" id="cBf-8g-fjW"/>
-                            <constraint firstItem="75H-3P-yEF" firstAttribute="top" secondItem="1OK-J8-p9h" secondAttribute="bottom" constant="45" id="cE1-dL-jf5"/>
+                            <constraint firstItem="75H-3P-yEF" firstAttribute="top" secondItem="1OK-J8-p9h" secondAttribute="bottom" constant="60" id="cE1-dL-jf5"/>
                             <constraint firstItem="Pfw-ki-brr" firstAttribute="top" secondItem="75H-3P-yEF" secondAttribute="bottom" constant="2" id="dwi-Al-UKG"/>
                             <constraint firstItem="t8S-sm-fby" firstAttribute="top" secondItem="h8K-LZ-Noc" secondAttribute="bottom" constant="53" id="eSB-A8-fAw"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="DB9-oE-SYm" secondAttribute="trailing" priority="990" constant="8" id="ef5-zY-UOE"/>
@@ -261,7 +261,7 @@
                             <constraint firstAttribute="centerX" secondItem="fRf-T1-LHD" secondAttribute="centerX" constant="-0.5" id="i25-SJ-eVS"/>
                             <constraint firstItem="HT7-2Y-PHU" firstAttribute="leading" secondItem="4Ap-CJ-CY1" secondAttribute="trailing" constant="-115" id="iAS-kZ-1Z5"/>
                             <constraint firstItem="lod-EQ-Oym" firstAttribute="leading" secondItem="75H-3P-yEF" secondAttribute="trailing" constant="5" id="iW9-FX-Sof"/>
-                            <constraint firstItem="tC7-i9-CCn" firstAttribute="top" secondItem="KHM-1t-kVN" secondAttribute="bottom" constant="16" id="jmc-AC-vee"/>
+                            <constraint firstItem="tC7-i9-CCn" firstAttribute="top" secondItem="KHM-1t-kVN" secondAttribute="bottom" constant="1" id="jmc-AC-vee"/>
                             <constraint firstItem="DB9-oE-SYm" firstAttribute="leading" secondItem="75H-3P-yEF" secondAttribute="trailing" constant="8" id="juq-bB-8rs"/>
                             <constraint firstItem="Pfw-ki-brr" firstAttribute="centerX" secondItem="HT7-2Y-PHU" secondAttribute="centerX" id="l3O-zR-dwA"/>
                             <constraint firstAttribute="centerX" secondItem="KHM-1t-kVN" secondAttribute="centerX" id="lNO-VK-4Sd"/>
@@ -269,7 +269,7 @@
                             <constraint firstItem="DB9-oE-SYm" firstAttribute="bottom" secondItem="75H-3P-yEF" secondAttribute="bottom" id="mbx-R6-703"/>
                             <constraint firstItem="m5f-1D-Beb" firstAttribute="leading" secondItem="1OK-J8-p9h" secondAttribute="trailing" id="n5h-0C-rsF"/>
                             <constraint firstItem="zAo-nS-r8a" firstAttribute="top" secondItem="75H-3P-yEF" secondAttribute="bottom" constant="11" id="neM-ll-pAe"/>
-                            <constraint firstItem="1OK-J8-p9h" firstAttribute="top" secondItem="KHM-1t-kVN" secondAttribute="bottom" constant="16" id="qeQ-Jr-0GQ"/>
+                            <constraint firstItem="1OK-J8-p9h" firstAttribute="top" secondItem="KHM-1t-kVN" secondAttribute="bottom" constant="1" id="qeQ-Jr-0GQ"/>
                             <constraint firstItem="981-yR-Ht7" firstAttribute="bottom" secondItem="75H-3P-yEF" secondAttribute="bottom" id="rpx-bZ-kGS"/>
                             <constraint firstItem="HT7-2Y-PHU" firstAttribute="top" secondItem="75H-3P-yEF" secondAttribute="bottom" constant="40" id="viR-S2-RQ2"/>
                             <constraint firstItem="h8K-LZ-Noc" firstAttribute="top" secondItem="HT7-2Y-PHU" secondAttribute="bottom" constant="25" id="vqp-FD-lhn"/>
@@ -385,12 +385,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Add Image-50" width="50" height="50"/>
         <image name="Back-50" width="50" height="50"/>
         <image name="Camera-50-3" width="50" height="50"/>
         <image name="Cancel-50-2" width="50" height="50"/>
         <image name="Paste-50-2" width="50" height="50"/>
         <image name="Share-50" width="50" height="50"/>
-        <image name="Upload-50" width="50" height="50"/>
         <image name="View Details-50-2" width="50" height="50"/>
     </resources>
 </document>
