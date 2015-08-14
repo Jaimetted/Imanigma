@@ -1,3 +1,4 @@
+
 //
 //  DecryptViewController.swift
 //  _App
@@ -11,7 +12,7 @@ import Parse
 import CryptoSwift
 
 class DecryptViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
+    @IBOutlet var spinner: UIActivity!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet var randomWordsField: UITextView?
     @IBOutlet var textView: UITextView!
@@ -22,7 +23,7 @@ class DecryptViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet var revealControllerButton: UIButton!
     @IBOutlet var clearButton: UIButton!
 
-    
+    //9596
 
     var calculator = FingerprintCalculator()
     var imagePicker = UIImagePickerController()

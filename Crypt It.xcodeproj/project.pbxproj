@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EC6A897A1B7C1F0C009A50A0 /* ParseKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC6A89791B7C1F0C009A50A0 /* ParseKey.plist */; };
+		EC879EF91B7D887800D834FF /* Words.txt in Resources */ = {isa = PBXBuildFile; fileRef = EC38B5E61B73DC6700158195 /* Words.txt */; };
 		ECAD24771B6171190008844D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAD24761B6171190008844D /* AppDelegate.swift */; };
 		ECAD24811B6171190008844D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECAD247F1B6171190008844D /* LaunchScreen.xib */; };
 		ECAD24991B6171540008844D /* DecryptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAD24971B6171540008844D /* DecryptViewController.swift */; };
@@ -379,6 +380,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC879EF91B7D887800D834FF /* Words.txt in Resources */,
 				EC6A897A1B7C1F0C009A50A0 /* ParseKey.plist in Resources */,
 				ECF159841B7287FB000F5547 /* Images.xcassets in Resources */,
 				ECAD24811B6171190008844D /* LaunchScreen.xib in Resources */,
@@ -548,7 +550,7 @@
 				INFOPLIST_FILE = _App2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "Crypt It";
-				PROVISIONING_PROFILE = "855dae53-d180-4cd0-8114-c37477805cec";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "_App2-Bridging-Header.h";
 			};
 			name = Release;

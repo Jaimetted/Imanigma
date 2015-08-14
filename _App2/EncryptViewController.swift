@@ -20,6 +20,9 @@ class EncryptViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet var back: UIButton!
     @IBOutlet var enterMessageLabel: UILabel!
     @IBOutlet var enterPasswordLabel: UILabel!
+    
+    @IBOutlet var loadingLabel: UILabel!
+    
     @IBOutlet var revealButton: UIButton!
     @IBOutlet var copyButton: UIButton!
     @IBOutlet var takeButton: UIButton!
@@ -46,7 +49,7 @@ class EncryptViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        spinner.hidden = true
         self.imagePicker.delegate = self
         //Hidding buttons
         spinner.hidden = true
@@ -75,6 +78,15 @@ class EncryptViewController: UIViewController, UIImagePickerControllerDelegate, 
         revealControllerButton.layer.borderWidth = 1.0
         hideControllerButton.layer.cornerRadius = 4
         revealControllerButton.layer.cornerRadius = 4
+        loadingLabel.hidden = true
+        
+        
+        hideButton.layer.borderWidth = 1.0
+        revealButton.layer.borderWidth = 1.0
+        hideButton.layer.borderColor = UIColor.whiteColor().CGColor
+        revealButton.layer.borderColor = UIColor.whiteColor().CGColor
+        hideButton.layer.cornerRadius = 4
+        revealButton.layer.cornerRadius = 4
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
@@ -85,9 +97,9 @@ class EncryptViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     @IBAction func hideViewControllerButton(sender: AnyObject) {
-        
+        // spinner.hidden = true
         self.imagePicker.delegate = self
-        
+        loadingLabel.hidden = true
         //Hidding buttons
         enterMessageLabel.hidden = false
         enterPasswordLabel.hidden = true
@@ -223,7 +235,7 @@ class EncryptViewController: UIViewController, UIImagePickerControllerDelegate, 
         let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: imageArray, applicationActivities: nil)
         //if iPhone
         activityViewController.excludedActivityTypes = [UIActivityTypeCopyToPasteboard]
-        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.Phone) {
+        if (UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Phone) {
             self.presentViewController(activityViewController, animated: true, completion: nil)
         }
         else {
@@ -368,7 +380,7 @@ class EncryptViewController: UIViewController, UIImagePickerControllerDelegate, 
                     //  println(arraySalt)
                 }
                 //------------------Hashing Salt------------------
-
+                
                 //------------------Salt Hash XOR MessageKey Salt------------------
                 var messageIDBytes = [UInt8]()
                 for(var i=0;i<48;++i){
@@ -389,7 +401,9 @@ class EncryptViewController: UIViewController, UIImagePickerControllerDelegate, 
             })
         }
     }
-    @IBAction func revealButtonTapped(sender: AnyObject) {
+    @IBAction func revealButtonTapped(sender: UIButton) {
+//        spinner.hidden = false
+//        spinner.startAnimating()
         if(randomWordsField?.text != nil){
             randomWords = randomWordsField!.text
             //random words to lower
@@ -503,9 +517,9 @@ class EncryptViewController: UIViewController, UIImagePickerControllerDelegate, 
             }
             let messageIdText = NSData(bytes: messageIDBytes, length: messageIDBytes.count)
             let messageID = messageIdText.base64EncodedStringWithOptions(nil)
-
+            
             //------------------Salt Hash XOR MessageKey Salt------------------
-
+            
             //----------Query from Parse----------
             var query = PFQuery(className:"Post")
             query.whereKey("hash", equalTo: messageID)
@@ -538,6 +552,7 @@ class EncryptViewController: UIViewController, UIImagePickerControllerDelegate, 
                 //------------------Decryption------------------
             }
         }
+        loadingLabel.hidden = true
     }
     //Picking image from album
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject: AnyObject]) {
